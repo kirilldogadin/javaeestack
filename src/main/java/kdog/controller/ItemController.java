@@ -1,5 +1,7 @@
 package kdog.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import kdog.dto.BaseDto;
 import kdog.dto.item.ItemDtoFull;
 import kdog.service.ItemService;
@@ -13,6 +15,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+@Api
 @Path("/item")
 @Stateless
 public class ItemController {
@@ -20,8 +23,10 @@ public class ItemController {
 	@EJB
 	ItemService itemService;
 
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
+	@ApiOperation(value = "Returns subresource something")
 	public Response getAll() {
 		return Response.ok(itemService.getAllAsDto()).build();
 	}
@@ -42,6 +47,7 @@ public class ItemController {
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
+	@ApiOperation(value = "Returns subresource something")
 	public Response getById(@PathParam("id") Long id){
 		return Response.ok(itemService.getById(id)).build();
 	}

@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>testee</groupId>
+    <groupId>kdog</groupId>
     <artifactId>javaEE</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <repositories>
         <repository>
             <id>JBoss repository</id>
@@ -54,7 +54,17 @@
                 <artifactId>resteasy-jackson-provider</artifactId>
                 <version>${resteasy-jaxrs-version}</version>
             </dependency>
-
+            <!-- https://mvnrepository.com/artifact/org.webjars/swagger-ui -->
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>swagger-ui</artifactId>
+                <version>3.12.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-jaxrs</artifactId>
+                <version>1.5.8</version>
+            </dependency>
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>

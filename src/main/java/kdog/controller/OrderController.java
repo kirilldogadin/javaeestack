@@ -1,5 +1,6 @@
 package kdog.controller;
 
+import io.swagger.annotations.Api;
 import kdog.dto.order.OrderDto;
 import kdog.entity.BaseEntity;
 import kdog.service.OrderService;
@@ -13,6 +14,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+@Api
 @Path("/order")
 @Stateless
 public class OrderController {
